@@ -1,105 +1,55 @@
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Padang Perwira Yudha</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: calc(10px + 0.33vw);
-      -webkit-font-smoothing: antialiased;
-      padding: 10vh 10vw;
-      color: #121314;
-    }
-    h1 {
-      font-size: 4.5em;
-      font-weight: 500;
-      margin-bottom: 0;
-    }
-    p {
-      font-size: 1.6em;
-      font-weight: 300;
-      line-height: 1.4;
-      max-width: 26em;
-    }
-    a {
-      text-decoration: none;
-      color: #121314;
-      position: relative;
-    }
-    a:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 60%;
-      left: -0.1em;
-      right: -0.1em;
-      bottom: 0;
-      transition: top 200ms cubic-bezier(0, .8, .13, 1);
-      background-color: rgba(79,192,141,0.5);
-    }
-    a:hover:after {
-      top: 0%;
-    }
-  </style>
-<script data-dapp-detection="">
-(function() {
-  let alreadyInsertedMetaTag = false
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/assets/app-icons/finder/32.png" />
+    <meta name="description" content="MacOS Desktop experience for Web" />
+    <title>Padang Perwira Yudha</title>
+    <link rel="apple-touch-icon" href="/assets/app-icons/finder/192.png" sizes="192x192" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://github1s.com" />
+    <link rel="preconnect" crossorigin="anonymous" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" crossorigin="anonymous" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" crossorigin="anonymous" href="https://github1s.com" />
 
-  function __insertDappDetected() {
-    if (!alreadyInsertedMetaTag) {
-      const meta = document.createElement('meta')
-      meta.name = 'dapp-detected'
-      document.head.appendChild(meta)
-      alreadyInsertedMetaTag = true
-    }
-  }
+    <link
+      crossorigin="anonymous"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;350;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  if (window.hasOwnProperty('web3')) {
-    // Note a closure can't be used for this var because some sites like
-    // www.wnyc.org do a second script execution via eval for some reason.
-    window.__disableDappDetectionInsertion = true
-    // Likely oldWeb3 is undefined and it has a property only because
-    // we defined it. Some sites like wnyc.org are evaling all scripts
-    // that exist again, so this is protection against multiple calls.
-    if (window.web3 === undefined) {
-      return
-    }
-    __insertDappDetected()
-  } else {
-    var oldWeb3 = window.web3
-    Object.defineProperty(window, 'web3', {
-      configurable: true,
-      set: function (val) {
-        if (!window.__disableDappDetectionInsertion)
-          __insertDappDetected()
-        oldWeb3 = val
-      },
-      get: function () {
-        if (!window.__disableDappDetectionInsertion)
-          __insertDappDetected()
-        return oldWeb3
-      }
-    })
-  }
-})()</script></head>
-<body>
-  <h1>Halo.</h1>
-  <p style="font-weight:500; font-size:2.2em">Nama saya Padang Perwira Yudha.</p>
-  <p>Seorang <a href="https://en.wikipedia.org/wiki/Software_engineer">pengembang perangkat lunak</a> dan sekarang <s>sedang berkuliah di</s> telah lulus dari salah satu universitas swasta di Yogyakarta.</p>
-<p>Kebanyakan perangkat lunak yang saya buat bersifat open source dan terpublikasi secara publik dalam <a href="https://github.com/pcpkomputer" target="_blank">GitHub</a>.
-</p>
-  
-  
-  <p>
-    Saya suka menulis artikel yang biasanya saya tuangkan dalam platform <a href="https://medium.com/@padangperwirayudha" target="_blank">medium</a> kalian juga bisa menemukan saya di <a href="https://twitter.com/yudhacode" target="_blank">twitter</a> dengan cuitan sampah keseharian saya.
+    <meta property="og:title" content="macOS in Svelte" />
+    <meta property="og:description" content="A painting of macOS Monterey in HTML, CSS and JS" />
+    <meta property="og:image" content="https://macos.now.sh/assets/cover-image.png" />
+    <meta property="og:url" content="https://macos.now.sh" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="prefetch" href="/assets/sounds/mac-startup-sound.mp3" />
+    <script type="module" crossorigin src="/assets/index.7e9f1049.js"></script>
+    <link rel="stylesheet" href="/assets/index.01f05c18.css">
+    <link rel="prefetch" href="/assets/index.7e9f1049.js">
+    <link rel="prefetch" href="/assets/Window.2180c69e.js">
+    <link rel="prefetch" href="/assets/AppStore.8ac92a59.js">
+    <link rel="prefetch" href="/assets/YudhaProfile.6ee86dd3.js">
+    <link rel="prefetch" href="/assets/WallpaperSelectorApp.70776b20.js">
+    <link rel="prefetch" href="/assets/Calculator.a208c50b.js">
+    <link rel="prefetch" href="/assets/VSCode.b867ebb1.js">
+    <link rel="prefetch" href="/assets/Calendar.5c9f4755.js">
+    <link rel="prefetch" href="/assets/Window.57258a50.css">
+    <link rel="prefetch" href="/assets/VSCode.13c26945.css">
+    <link rel="prefetch" href="/assets/Calendar.e592e301.css">
+    <link rel="prefetch" href="/assets/Calculator.45de008d.css">
+    <link rel="prefetch" href="/assets/AppStore.9aa68d2c.css">
+    <link rel="prefetch" href="/assets/WallpaperSelectorApp.e2c58552.css">
+    <link rel="prefetch" href="/assets/YudhaProfile.04c88b27.css">
+    <link rel="prefetch" href="/assets/index.01f05c18.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
     
-  </p>
-  <p>
-   Selain programming, hobi saya adalah mendalami ilmu mengenai post video production, audio processing, computer vision, dan <a href="https://garismiring-an8.github.io" target="_blank">fansubbing</a>.    
-  </p>
+  </body>
+
   
-
-
-</body></html>
+</html>
