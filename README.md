@@ -1,1 +1,0 @@
-# padangperwirayudha.github.io
